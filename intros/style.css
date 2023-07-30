@@ -1,0 +1,147 @@
+:root {
+    --background-color: rgb(6,10,24);
+    --border-color:rgba(255,255,255,0.1);
+}
+
+body{
+    background-color:var(--background-color);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    margin:0px;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    width:100%;
+    border-bottom:1px solid var(--border-color);
+
+}
+
+nav > .nav-section{
+    padding: 3rem 2rem;
+    display:flex;
+    gap: 1rem;
+    border-left: 1px solid var(--border-color);
+}
+
+#nav-logo-section,#nav-link-section{
+    flex-basis:calc(100%/3);
+}
+
+#nav-link-section{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+#nav-social-section,#nav-contact-section{
+    flex-grow: 1;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,a,p,span{
+    font-family:"Rubik", sans-serif;
+    font-weight:400;
+    color: white;
+    text-decoration: none;
+
+}
+
+main{
+    flex-grow: 1;
+    position: relative;
+}
+
+main > article {
+   
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2fr 1fr; /* Updated: Changed the order and sizes of columns */
+    grid-template-rows: 2fr 1fr;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+main > article > .article-section{
+    height:100%;
+}
+
+main > article > .article-description-section,
+main > article .article-nav-section{
+    border-left:1px solid var(--border-color);
+}
+
+main > article > .article-title-section,
+main > article .article-nav-section{
+    border-top:1px solid var(--border-color);
+}
+
+
+.article-description-section p{
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center; /* If you want the text centered, you can use text-align: center */
+    padding: 10px 0;
+    padding-left: 33px;
+    padding-right: 43px;
+    
+
+}
+
+.article-title-section h2{
+    font-weight:900;
+    font-size: 44px;
+    line-height:39px;
+    padding-left: 33px;
+    padding-right: 43px;
+}
+
+.article-title-section{
+    display: flex;
+    justify-content: space-around;
+}
+
+.article-title-section a {
+    padding-top: 90px;
+}
+
+
+.article-nav-section{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 90px;
+
+}
+
+.article-description-section {
+    flex: 1;
+    display: flex;
+    text-align: right;
+    align-items: flex-end; /* Align the content to the bottom of the div */
+    border-left: 1px solid var(--border-color);
+    opacity:0.8;
+}
+
+main > article[data-status ="inactve"]{
+    transform: translateX(-100%);
+}
+  
+
+
+
+
+
+
+
+
+
+
